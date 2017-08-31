@@ -1,0 +1,9 @@
+C:\Users\Grubs\Desktop\C#\Receipt Tally\Receipt Tally\bin\Debug\Receipt Tally.exe.config
+C:\Users\Grubs\Desktop\C#\Receipt Tally\Receipt Tally\bin\Debug\Receipt Tally.exe
+C:\Users\Grubs\Desktop\C#\Receipt Tally\Receipt Tally\bin\Debug\Receipt Tally.pdb
+C:\Users\Grubs\Desktop\C#\Receipt Tally\Receipt Tally\obj\Debug\Receipt Tally.csprojResolveAssemblyReference.cache
+C:\Users\Grubs\Desktop\C#\Receipt Tally\Receipt Tally\obj\Debug\Receipt_Tally.Properties.Resources.resources
+C:\Users\Grubs\Desktop\C#\Receipt Tally\Receipt Tally\obj\Debug\Receipt_Tally.Form1.resources
+C:\Users\Grubs\Desktop\C#\Receipt Tally\Receipt Tally\obj\Debug\Receipt Tally.csproj.GenerateResource.Cache
+C:\Users\Grubs\Desktop\C#\Receipt Tally\Receipt Tally\obj\Debug\Receipt Tally.exe
+C:\Users\Grubs\Desktop\C#\Receipt Tally\Receipt Tally\obj\Debug\Receipt Tally.pdb
