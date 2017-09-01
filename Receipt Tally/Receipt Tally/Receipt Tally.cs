@@ -12,6 +12,8 @@ namespace Receipt_Tally
 {
     public partial class Form1 : Form
     {
+        int listCount;
+
         double tristan,
                collin,
                ryan,
@@ -24,6 +26,8 @@ namespace Receipt_Tally
         public Form1()
         {
             InitializeComponent();
+
+            listCount = 1;
 
             tristan = 0;
             collin = 0;
@@ -110,38 +114,54 @@ namespace Receipt_Tally
             {
                 itemAmount = Convert.ToDouble(Display.Text);
                 splitAmount = itemAmount / numberOfSplits;
-                
+                Feed.AppendText("Transaction " + listCount + ":\n");
+                Feed.AppendText( "Charged $" + itemAmount + " \n" + numberOfSplits + " ways\n\n" );
+
                 if(ChkCollin.Checked)
                 {
                     collin += splitAmount;
                     //round(collin);
-                    LblCollin.Text = "Collin: " + collin;                    
+                    LblCollin.Text = "Collin: " + collin;
+                    Feed.AppendText("Collin: " + splitAmount + "\n");
                 }
 
                 if (ChkTristan.Checked)
                 {
                     tristan += splitAmount;
                     //round(tristan);
-                    lblTristan.Text = "Tristan: " + tristan;                   
+                    lblTristan.Text = "Tristan: " + tristan;
+                    Feed.AppendText("Tristan: " + splitAmount + "\n");
                 }
 
                 if (ChkRyan.Checked)
                 {
                     ryan += splitAmount;
                     //round(ryan);
-                    LblRyan.Text = "Ryan: " + ryan;                   
+                    LblRyan.Text = "Ryan: " + ryan;
+                    Feed.AppendText("Ryan: " + splitAmount + "\n");
                 }
 
                 if (ChkTad.Checked)
                 {
                     tad += splitAmount;
                     //round(tad);
-                    LblTad.Text = "Tad: " + tad;                   
+                    LblTad.Text = "Tad: " + tad;
+                    Feed.AppendText("Tad: " + splitAmount + "\n");
                 }
-
+                Feed.AppendText("\n");
                 Display.Clear();
             }
             
+        }
+
+        private void Feed_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblRunningTotal_Click(object sender, EventArgs e)
+        {
+
         }
 
         private double round(double total)

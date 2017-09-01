@@ -33,12 +33,15 @@
             this.ChkRyan = new System.Windows.Forms.CheckBox();
             this.ChkTad = new System.Windows.Forms.CheckBox();
             this.Display = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblIndTotal = new System.Windows.Forms.Label();
             this.lblTristan = new System.Windows.Forms.Label();
             this.LblCollin = new System.Windows.Forms.Label();
             this.LblRyan = new System.Windows.Forms.Label();
             this.LblTad = new System.Windows.Forms.Label();
             this.LblSplit = new System.Windows.Forms.Label();
+            this.LblRunningTotal = new System.Windows.Forms.Label();
+            this.Feed = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ChkTristan
@@ -95,15 +98,15 @@
             this.Display.TextChanged += new System.EventHandler(this.Display_TextChanged);
             this.Display.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Display_KeyPress);
             // 
-            // label1
+            // LblIndTotal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(107, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Running Totals";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.LblIndTotal.AutoSize = true;
+            this.LblIndTotal.Location = new System.Drawing.Point(107, 124);
+            this.LblIndTotal.Name = "LblIndTotal";
+            this.LblIndTotal.Size = new System.Drawing.Size(84, 13);
+            this.LblIndTotal.TabIndex = 5;
+            this.LblIndTotal.Text = "Individual Totals";
+            this.LblIndTotal.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblTristan
             // 
@@ -154,17 +157,50 @@
             this.LblSplit.Text = "Split";
             this.LblSplit.Click += new System.EventHandler(this.LblSplit_Click);
             // 
+            // LblRunningTotal
+            // 
+            this.LblRunningTotal.AutoSize = true;
+            this.LblRunningTotal.Location = new System.Drawing.Point(182, 148);
+            this.LblRunningTotal.Name = "LblRunningTotal";
+            this.LblRunningTotal.Size = new System.Drawing.Size(80, 13);
+            this.LblRunningTotal.TabIndex = 11;
+            this.LblRunningTotal.Text = "Running Total: ";
+            this.LblRunningTotal.Click += new System.EventHandler(this.LblRunningTotal_Click);
+            // 
+            // Feed
+            // 
+            this.Feed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Feed.Location = new System.Drawing.Point(294, 58);
+            this.Feed.Multiline = true;
+            this.Feed.Name = "Feed";
+            this.Feed.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Feed.Size = new System.Drawing.Size(202, 185);
+            this.Feed.TabIndex = 12;
+            this.Feed.TextChanged += new System.EventHandler(this.Feed_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(375, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "History";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(527, 267);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Feed);
+            this.Controls.Add(this.LblRunningTotal);
             this.Controls.Add(this.LblSplit);
             this.Controls.Add(this.LblTad);
             this.Controls.Add(this.LblRyan);
             this.Controls.Add(this.LblCollin);
             this.Controls.Add(this.lblTristan);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblIndTotal);
             this.Controls.Add(this.Display);
             this.Controls.Add(this.ChkTad);
             this.Controls.Add(this.ChkRyan);
@@ -185,12 +221,15 @@
         private System.Windows.Forms.CheckBox ChkRyan;
         private System.Windows.Forms.CheckBox ChkTad;
         private System.Windows.Forms.TextBox Display;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblIndTotal;
         private System.Windows.Forms.Label lblTristan;
         private System.Windows.Forms.Label LblCollin;
         private System.Windows.Forms.Label LblRyan;
         private System.Windows.Forms.Label LblTad;
         private System.Windows.Forms.Label LblSplit;
+        private System.Windows.Forms.Label LblRunningTotal;
+        private System.Windows.Forms.TextBox Feed;
+        private System.Windows.Forms.Label label1;
     }
 }
 
