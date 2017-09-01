@@ -42,6 +42,10 @@
             this.LblRunningTotal = new System.Windows.Forms.Label();
             this.Feed = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnRemove = new System.Windows.Forms.Button();
+            this.TxtbTransactionID = new System.Windows.Forms.TextBox();
+            this.LblTransactionToRemove = new System.Windows.Forms.Label();
+            this.LblTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ChkTristan
@@ -90,6 +94,7 @@
             // 
             // Display
             // 
+            this.Display.BackColor = System.Drawing.SystemColors.Window;
             this.Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Display.Location = new System.Drawing.Point(137, 58);
             this.Display.Name = "Display";
@@ -101,9 +106,10 @@
             // LblIndTotal
             // 
             this.LblIndTotal.AutoSize = true;
+            this.LblIndTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblIndTotal.Location = new System.Drawing.Point(107, 124);
             this.LblIndTotal.Name = "LblIndTotal";
-            this.LblIndTotal.Size = new System.Drawing.Size(84, 13);
+            this.LblIndTotal.Size = new System.Drawing.Size(112, 18);
             this.LblIndTotal.TabIndex = 5;
             this.LblIndTotal.Text = "Individual Totals";
             this.LblIndTotal.Click += new System.EventHandler(this.label1_Click);
@@ -160,38 +166,84 @@
             // LblRunningTotal
             // 
             this.LblRunningTotal.AutoSize = true;
-            this.LblRunningTotal.Location = new System.Drawing.Point(182, 148);
+            this.LblRunningTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRunningTotal.Location = new System.Drawing.Point(268, 124);
             this.LblRunningTotal.Name = "LblRunningTotal";
-            this.LblRunningTotal.Size = new System.Drawing.Size(80, 13);
+            this.LblRunningTotal.Size = new System.Drawing.Size(122, 18);
             this.LblRunningTotal.TabIndex = 11;
             this.LblRunningTotal.Text = "Running Total: ";
             this.LblRunningTotal.Click += new System.EventHandler(this.LblRunningTotal_Click);
             // 
             // Feed
             // 
+            this.Feed.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Feed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Feed.Location = new System.Drawing.Point(294, 58);
+            this.Feed.Location = new System.Drawing.Point(12, 282);
             this.Feed.Multiline = true;
             this.Feed.Name = "Feed";
             this.Feed.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Feed.Size = new System.Drawing.Size(202, 185);
+            this.Feed.Size = new System.Drawing.Size(477, 280);
             this.Feed.TabIndex = 12;
             this.Feed.TextChanged += new System.EventHandler(this.Feed_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(375, 35);
+            this.label1.Location = new System.Drawing.Point(223, 254);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "History";
             // 
+            // BtnRemove
+            // 
+            this.BtnRemove.Location = new System.Drawing.Point(326, 211);
+            this.BtnRemove.Name = "BtnRemove";
+            this.BtnRemove.Size = new System.Drawing.Size(75, 23);
+            this.BtnRemove.TabIndex = 14;
+            this.BtnRemove.Text = "Remove";
+            this.BtnRemove.UseVisualStyleBackColor = true;
+            this.BtnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
+            // 
+            // TxtbTransactionID
+            // 
+            this.TxtbTransactionID.BackColor = System.Drawing.SystemColors.Info;
+            this.TxtbTransactionID.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.TxtbTransactionID.Location = new System.Drawing.Point(381, 176);
+            this.TxtbTransactionID.Name = "TxtbTransactionID";
+            this.TxtbTransactionID.Size = new System.Drawing.Size(75, 20);
+            this.TxtbTransactionID.TabIndex = 15;
+            this.TxtbTransactionID.TextChanged += new System.EventHandler(this.TxtbTransactionID_TextChanged);
+            // 
+            // LblTransactionToRemove
+            // 
+            this.LblTransactionToRemove.AutoSize = true;
+            this.LblTransactionToRemove.Location = new System.Drawing.Point(239, 176);
+            this.LblTransactionToRemove.Name = "LblTransactionToRemove";
+            this.LblTransactionToRemove.Size = new System.Drawing.Size(136, 13);
+            this.LblTransactionToRemove.TabIndex = 16;
+            this.LblTransactionToRemove.Text = "TransactionID To Remove:";
+            // 
+            // LblTitle
+            // 
+            this.LblTitle.AutoSize = true;
+            this.LblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitle.Location = new System.Drawing.Point(321, 27);
+            this.LblTitle.Name = "LblTitle";
+            this.LblTitle.Size = new System.Drawing.Size(158, 75);
+            this.LblTitle.TabIndex = 17;
+            this.LblTitle.Text = "Receipt Tally\r\nVersion 1.1\r\nTristan Van Cise\r\n";
+            this.LblTitle.Click += new System.EventHandler(this.LblTitle_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 267);
+            this.ClientSize = new System.Drawing.Size(527, 574);
+            this.Controls.Add(this.LblTitle);
+            this.Controls.Add(this.LblTransactionToRemove);
+            this.Controls.Add(this.TxtbTransactionID);
+            this.Controls.Add(this.BtnRemove);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Feed);
             this.Controls.Add(this.LblRunningTotal);
@@ -230,6 +282,10 @@
         private System.Windows.Forms.Label LblRunningTotal;
         private System.Windows.Forms.TextBox Feed;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnRemove;
+        private System.Windows.Forms.TextBox TxtbTransactionID;
+        private System.Windows.Forms.Label LblTransactionToRemove;
+        private System.Windows.Forms.Label LblTitle;
     }
 }
 
