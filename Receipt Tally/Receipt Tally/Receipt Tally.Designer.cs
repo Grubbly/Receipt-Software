@@ -232,7 +232,7 @@
             this.LblTitle.Name = "LblTitle";
             this.LblTitle.Size = new System.Drawing.Size(158, 75);
             this.LblTitle.TabIndex = 17;
-            this.LblTitle.Text = "Receipt Tally\r\nVersion 1.1\r\nTristan Van Cise\r\n";
+            this.LblTitle.Text = "Receipt Tally\r\nVersion 1.2\r\nTristan Van Cise\r\n";
             this.LblTitle.Click += new System.EventHandler(this.LblTitle_Click);
             // 
             // Form1

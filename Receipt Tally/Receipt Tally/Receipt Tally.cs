@@ -221,6 +221,9 @@ namespace Receipt_Tally
                 transactionID = Convert.ToInt32(TxtbTransactionID.Text);
                 amountToRemove = transactionArray[transactionID];
 
+                total -= ( amountToRemove* transactionParticipants[transactionID].Count() );
+                LblRunningTotal.Text = "Running Total: $" + total;
+
                 Feed.AppendText("\nREMOVING FROM TRANSACTION " + transactionID + "\n");
                 Feed.AppendText("Original Amount: $" + amountToRemove * transactionParticipants[transactionID].Count() + "\n\n");
 
